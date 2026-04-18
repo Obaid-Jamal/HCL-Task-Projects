@@ -36,8 +36,10 @@ val3 = st.number_input("Loan Amount", 0.0)
 
 if st.button("Predict"):
     prediction = model.predict([[val1, val2, val3]])
-
+    proba = model.predict_proba([[income, credit, loan_amt]])
     if prediction[0] == 1:
         st.success("Loan Approved ✅")
     else:
         st.error("Loan Rejected ❌")
+        
+    st.write("Approval Probability:", round(proba[0][1] * 100, 2), "%")
