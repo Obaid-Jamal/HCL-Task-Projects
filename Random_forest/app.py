@@ -1,3 +1,8 @@
+import os
+import streamlit as st
+
+st.write("Current directory:", os.getcwd())
+st.write("Files here:", os.listdir())
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
