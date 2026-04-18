@@ -1,14 +1,9 @@
-import os
-import streamlit as st
-
-st.write("Current directory:", os.getcwd())
-st.write("Files here:", os.listdir())
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
 # Load dataset
-df = pd.read_csv("loan_data.csv")
+df = pd.read_csv("Random_forest/loan_data.csv")
 
 # Clean column names
 df.columns = df.columns.str.strip().str.lower()
